@@ -59,7 +59,6 @@ const cartSlice = createSlice({
         state.isLoading = true;
       })
       .addCase(getCartItems.fulfilled, (state, action) => {
-        // console.log(action);
         state.isLoading = false;
         state.cartItems = action.payload;
       })
@@ -70,7 +69,6 @@ const cartSlice = createSlice({
   },
 });
 
-// console.log(cartSlice);
 export const { clearCart, removeItem, increase, decrease, calculateTotals } =
   cartSlice.actions;
 
